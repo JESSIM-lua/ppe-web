@@ -1,0 +1,99 @@
+@use '../../common';
+
+.operatorActionContainer {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+
+	button {
+		background: #4a90e2;
+		color: #fff;
+		padding: 10px 20px;
+		font-size: 18px;
+		border: none;
+		border-radius: 10px;
+		box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+		cursor: pointer;
+		transition: all 0.3s ease;
+
+		&:hover {
+			background: #357abd;
+			transform: scale(1.05);
+		}
+	}
+
+	.operatorActionButtonsContainer {
+		display: flex;
+		justify-content: center;
+		width: 600px;
+		position: sticky;
+		top: 0;
+		background: rgb(220, 215, 215);
+		padding: 10px 10px 10px 10px;
+		.operatorActionListArrayItemExportButton {
+			background-color: common.$orange;
+			color: common.$black;
+		}
+		.operatorActionListArrayItemVerifierButton {
+			background-color: common.$green;
+			color: common.$black;
+		}
+	}
+
+	.operatorActionListArrayContainer {
+		flex: 0.1;
+		overflow-y: auto;
+		background-color: rgba(common.$grey, 0.3);
+		margin-top: 10px;
+
+		thead {
+			background-color: rgba(common.$grey, 0.7);
+
+			tr th {
+				text-align: left;
+				padding: 5px;
+			}
+		}
+
+		tbody {
+			tr {
+				&:nth-child(even) {
+					background-color: rgba(common.$grey, 0.5);
+				}
+
+				td {
+					padding: 5px;
+					font-size: 20px;
+					font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial;
+					.operatorActionListCartState {
+						font-size: 40px;
+					}
+
+					&.operatorActionListArrayActionContainer {
+						display: flex;
+
+						gap: 10px;
+						margin-top: 15px;
+						.operatorActionListArrayItemDeleteButton {
+							background-color: common.$red;
+							color: common.$black;
+						}
+
+						.operatorActionListArrayItemVerifierButton {
+							background-color: common.$green;
+							color: common.$black;
+						}
+						.operatorActionListArrayItemExportButton {
+							background-color: common.$orange;
+							color: common.$black;
+						}
+					}
+
+					ul {
+						list-style: none;
+					}
+				}
+			}
+		}
+	}
+}

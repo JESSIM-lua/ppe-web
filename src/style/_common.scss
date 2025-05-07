@@ -1,0 +1,19 @@
+// Colors
+$blue: #171738;
+$red: #e36588;
+$green: #99edcc;
+$black: black;
+$white: white;
+$grey: lightgrey;
+$orange: #db967d;
+
+// Export
+:export {
+	blue: $blue;
+	red: $red;
+	green: $green;
+	black: $black;
+	white: $white;
+	grey: $grey;
+	orange: $orange;
+}

@@ -1,0 +1,38 @@
+.homeButtonContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+	gap: 2rem;
+	padding: 2rem;
+}
+
+.homeButton {
+	background: #4a90e2;
+	color: #fff;
+	padding: 1rem 2.5rem;
+	font-size: 1.2rem;
+	border: none;
+	border-radius: 1rem;
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+	transition: all 0.3s ease;
+
+	&:hover {
+		background: #357abd;
+		transform: scale(1.05);
+		box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+	}
+
+	&:active {
+		transform: scale(0.98);
+	}
+}
+
+@media (min-width: 600px) {
+	.homeButtonContainer {
+		flex-direction: row;
+	}
+}

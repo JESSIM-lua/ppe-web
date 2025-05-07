@@ -1,0 +1,12 @@
+@use '../../common';
+
+@mixin button {
+	background: #4a90e2;
+	color: #fff;
+	padding: 12px 24px;
+	font-size: 16px;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}

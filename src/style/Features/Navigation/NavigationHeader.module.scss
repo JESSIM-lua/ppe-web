@@ -1,0 +1,20 @@
+.navigationHeaderContainer {
+	display: flex;
+	justify-content: space-between;
+
+	button {
+		background: #a91818;
+		color: #fff;
+		padding: 12px 24px;
+		font-size: 16px;
+		border: none;
+		border-radius: 8px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+
+		&:hover {
+			background: #357abd;
+			transform: scale(1.05);
+		}
+	}
+}

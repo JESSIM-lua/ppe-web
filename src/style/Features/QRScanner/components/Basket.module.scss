@@ -1,0 +1,64 @@
+@import '../../../common';
+
+.basketFormContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	background-color: rgba($grey, 0.2);
+	padding: 10px;
+	border-radius: 2px;
+	.basketFormHeader {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.basketFormItemsContainer {
+		display: grid;
+		max-height: 70vh;
+		overflow-y: scroll;
+		.backetFormItemContainer {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			.backetFormItemButtonContainer {
+				display: flex;
+				justify-content: center;
+				gap: 15px;
+				.backetFormItemButton {
+					padding: 10px 18px;
+					&.removeQuantity {
+						background-color: $red;
+						color: $black;
+					}
+					&.addQuantity {
+						background-color: $green;
+						color: $black;
+					}
+					&.deleteQuantity {
+						background-color: $grey;
+						> svg {
+							width: 15px;
+						}
+					}
+				}
+			}
+			.backetFormItemDecoration {
+				display: flex;
+				margin: auto;
+				background-color: $grey;
+				width: 50vw;
+				height: 1px;
+			}
+		}
+	}
+	.basketFormSubmitButton {
+		display: flex;
+		color: white;
+		gap: 10px;
+		margin: auto;
+		margin-top: 20px;
+		> svg {
+			width: 15px;
+		}
+	}
+}

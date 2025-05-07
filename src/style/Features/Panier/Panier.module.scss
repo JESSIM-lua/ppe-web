@@ -1,0 +1,193 @@
+@use '../../common';
+
+.panierContainer {
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	height: 90vh;
+	background: #f5f7fa;
+
+	.PanierContainerHeader {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 12px;
+		margin-bottom: 24px;
+	}
+
+	h2 {
+		font-size: 24px;
+		text-align: center;
+		color: #f5f7fa;
+	}
+
+	.basketContainer {
+		background: linear-gradient(135deg, #ffffff, #c1daec);
+		border-radius: 8px;
+		width: 84vw;
+		padding: 24px;
+		margin-bottom: 24px;
+		box-shadow: 0 3px 3px rgb(0, 0, 0);
+
+		h3 {
+			font-size: 20px;
+			margin-bottom: 12px;
+			color: #4a4a4a;
+		}
+
+		p {
+			color: #666;
+			font-style: italic;
+		}
+
+		.basketContainerButton {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 8px;
+			color: #333;
+			// padding: 12px 16px;
+			border-radius: 16px;
+
+			button {
+				background: #72cf76;
+				color: #fff;
+				padding: 10px 16px;
+				font-size: 14px;
+				border: none;
+				border-radius: 8px;
+				cursor: pointer;
+				transition: all 0.3s ease;
+				margin-top: 16px;
+
+				&:hover {
+					background: #357abd;
+					transform: scale(1.05);
+				}
+			}
+
+			.deleteButton {
+				background: #ff5e5e;
+				color: #fff;
+
+				&:hover {
+					background: #e64545;
+				}
+			}
+		}
+		.deleteButton {
+			background: #ff5e5e;
+			color: #fff;
+
+			&:hover {
+				background: #e64545;
+			}
+		}
+	}
+
+	.productList {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+	}
+
+	.productItem {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 12px;
+		background-color: #f0f4fa;
+		padding: 12px 16px;
+		border-radius: 32px;
+		box-shadow: 0 3px 3px rgb(159, 216, 236);
+
+		label {
+			font-weight: 600;
+		}
+
+		input[type='number'] {
+			width: 60px;
+			padding: 6px;
+			border-radius: 6px;
+			border: 1px solid #ccc;
+			outline: none;
+			font-size: 16px;
+		}
+	}
+
+	.groupSubmitButton {
+		align-self: center;
+		background: #28a745;
+		color: #fff;
+		padding: 12px 24px;
+		font-size: 16px;
+		border: none;
+		border-radius: 8px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+
+		&:hover {
+			background: #218838;
+			transform: scale(1.05);
+		}
+	}
+
+	.continueScanningButton {
+		align-self: center;
+		background: #4a90e2;
+		color: #fff;
+		padding: 12px 24px;
+		font-size: 16px;
+		margin-bottom: 50px;
+		border: none;
+		border-radius: 8px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+
+		&:hover {
+			background: #357abd;
+			transform: scale(1.05);
+		}
+	}
+
+	.PanierContainerFooter {
+		display: flex;
+		margin: auto;
+		gap: 8px;
+		align-items: center;
+
+		button {
+			background: #4a90e2;
+			color: #fff;
+			padding: 12px 24px;
+			font-size: 16px;
+			border: none;
+			border-radius: 8px;
+			cursor: pointer;
+			transition: all 0.3s ease;
+
+			&:hover {
+				background: #357abd;
+				transform: scale(1.05);
+			}
+		}
+
+		.PanierSubmitAll {
+			background: #28a745;
+			color: #fff;
+			padding: 12px 24px;
+			font-size: 16px;
+			border: none;
+			border-radius: 8px;
+			cursor: pointer;
+			transition: all 0.3s ease;
+
+			&:hover {
+				background: #218838;
+				transform: scale(1.05);
+			}
+		}
+	}
+}

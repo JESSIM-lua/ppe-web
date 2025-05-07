@@ -1,0 +1,26 @@
+.popupContent {
+	position: absolute;
+	display: none;
+	top: 0;
+	left: 0;
+	width: 100vw;
+
+	height: 100%;
+	overflow: none;
+	border: none;
+	&.open {
+		display: flex;
+		padding-top: 60px;
+		justify-content: center;
+	}
+	.blurContent {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		z-index: 1;
+		overflow: none;
+		background-color: rgba(51, 70, 83, 0.8);
+	}
+}

@@ -1,0 +1,15 @@
+@use '../../components/common/button.module.scss';
+
+.loginContainer {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	.loginFormContainer {
+		margin-top: 20px;
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+	}
+}

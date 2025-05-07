@@ -1,0 +1,204 @@
+@use '../../common';
+
+.QRScannerContainer {
+	display: flex;
+	flex-direction: column;
+	height: 90vh;
+	padding: 32px;
+	position: relative;
+	background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+
+	.popupsContainer {
+		position: static;
+		z-index: 10;
+		top: 0;
+		background-color: #ff0000;
+	}
+
+	.QRScannerWorksiteContainer {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+		position: relative;
+		z-index: 1;
+
+		.QRScannerWorksiteContainerButtons {
+			display: flex;
+			flex-wrap: wrap;
+			padding-top: 30px;
+			gap: 12px;
+			justify-content: center;
+			// position: fixed;
+
+			.QRScannerCartButton {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 8px;
+				color: #333;
+				padding: 12px 16px;
+				background: #ffffff;
+				border: 1px solid #000000;
+				border-radius: 16px;
+				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+				backdrop-filter: blur(6px);
+				// position: fixed;
+				right: 32px;
+				top: 220px;
+				transition: all 0.3s ease;
+
+				&:hover {
+					transform: scale(1.05);
+				}
+
+				img {
+					width: 20px;
+					height: 20px;
+				}
+			}
+
+			button {
+				background: #ffffff;
+				color: #000000;
+				padding: 10px 20px;
+				font-size: 16px;
+				border: none;
+				border-radius: 12px;
+				cursor: pointer;
+				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+				transition: all 0.3s ease;
+
+				&:hover {
+					background: #1460e2;
+					transform: scale(1.05);
+				}
+			}
+
+			.QRScannerAjouterChantier {
+				background-color: #78c682;
+			}
+		}
+
+		.activeTab {
+			background: #1f76d9 !important;
+			color: #ffffff !important;
+			box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+		}
+
+		h1 {
+			font-size: 28px;
+			color: #333;
+		}
+	}
+
+	.QRScannerButtonPushToScan {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 8px;
+		font-size: 24px;
+		color: #ffffff;
+		// position: fixed;
+		padding: 12px 16px;
+		background: #00000089;
+		border: 1px solid #ffffff;
+		border-radius: 16px;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+		position: absolute;
+		// right: 32px;
+		bottom: 50px;
+
+		:hover {
+			transform: scale(1.05);
+		}
+
+		img {
+			width: 20px;
+			height: 20px;
+		}
+	}
+
+	.QRScannerComponent {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		// position: fixed;
+		gap: 24px;
+		// width: 80vw;
+		padding-top: 50px;
+
+		.QRScannerCartButton {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 8px;
+			color: #333;
+			padding: 12px 16px;
+			background: #ffffff;
+			border: 1px solid #000000;
+			border-radius: 16px;
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+			backdrop-filter: blur(6px);
+			// position: fixed;
+			// right: 32px;
+			// top: 220px;
+			transition: all 0.3s ease;
+
+			&:hover {
+				transform: scale(1.05);
+			}
+
+			img {
+				width: 20px;
+				height: 20px;
+			}
+		}
+
+		.scanControlButton {
+			background: #4a90e2;
+			color: #fff;
+			padding: 12px 20px;
+			border: none;
+			border-radius: 16px;
+			font-size: 16px;
+			cursor: pointer;
+			box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+			transition: all 0.3s ease;
+
+			&:hover {
+				background: #357abd;
+				transform: scale(1.05);
+			}
+		}
+
+		.QRScannerButtonContainer {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: auto;
+			gap: 8px;
+			height: 70px;
+			width: 100px;
+			font-size: 24px;
+			color: #ffffff;
+			position: fixed;
+			// padding: 12px 16px;
+			// border: 1px solid #ffffff;
+			border-radius: 16px;
+			// box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+			position: absolute;
+			// right: 20px;
+			bottom: 20px;
+
+			// :hover {
+			// 	transform: scale(1.05);
+			// }
+
+			img {
+				width: 20px;
+				height: 20px;
+			}
+		}
+	}
+}
