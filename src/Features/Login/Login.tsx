@@ -19,45 +19,33 @@ const Login = () => {
 	 * @param e - The form event
 	 */
 	const handleSubmit: React.FormEventHandler<HTMLFormElement> = async (e) => {
-		e.preventDefault()
+	e.preventDefault()
+	try {
+		const response = await fetch('http://localhost:4000/api/auth/login', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({
+				username,
+				password,
+			}),
+		})
 
-		try {
-			const auth = `${username}:${password}`
-			const response = await fetch(
-				'https://review.jabberwocky.addeteam.fr/api/auth/login',
-				{
-					method: 'POST',
-					headers: {
-						'Content-Type': 'application/json',
-						softwareidentifier: 'fr.adde.market',
-						authorization: 'Basic ' + btoa(auth),
-					},
-				}
-			)
-			const data = await response.json()
-			console.log(data)
-
-			// USER MANAGEMENT
-
-			if (
-				data.message === 'Unauthorized' ||
-				data.message === 'User not found' ||
-				data.error === 'Unauthorized'
-			) {
-				setErrorConnexion(true)
-				setTimeout(() => {
-					console.log(errorConnexion)
-				}, 200)
-			} else {
-				localStorage.setItem('access_token', data.access_token)
-				localStorage.setItem('name', data.username)
-				navigate('/')
-			}
-		} catch (error) {
-			console.error(error)
-			setConnexionFailed(true)
+		const data = await response.json()
+		if (!response.ok || data.message === 'Unauthorized') {
+			setErrorConnexion(true)
+		} else {
+			localStorage.setItem('access_token', data.access_token)
+			localStorage.setItem('name', data.username)
+			navigate('/')
 		}
+	} catch (error) {
+		console.error(error)
+		setConnexionFailed(true)
 	}
+}
+
 
 	return (
 		<div className={style.loginContainer}>

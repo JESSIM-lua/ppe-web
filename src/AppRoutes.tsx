@@ -14,10 +14,10 @@ import Home from './Features/Home/Home'
 
 const AppRoutes = () => {
 	const navigate = useNavigate()
-	useEffect(() => {
-		localStorage.setItem('access_token', '12321312321312')
-		localStorage.setItem('name', 'jessim')
-	}, [navigate])
+	// useEffect(() => {
+	// 	localStorage.setItem('access_token', '12321312321312')
+	// 	localStorage.setItem('name', 'jessim')
+	// }, [navigate])
 
 	useEffect(() => {
 		const token = localStorage.getItem('access_token')

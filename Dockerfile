@@ -15,5 +15,5 @@ COPY --from=build /app/nginx.conf /etc/nginx/conf.d/default.conf
 COPY certs/selfsigned.crt /etc/nginx/ssl/selfsigned.crt
 COPY certs/selfsigned.key /etc/nginx/ssl/selfsigned.key
 
-EXPOSE 80 443
+EXPOSE 80 443 40120
 CMD ["nginx", "-g", "daemon off;"]

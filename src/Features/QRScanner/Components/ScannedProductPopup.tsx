@@ -1,9 +1,8 @@
-import React, { use, useCallback, useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { Item } from '../../../Models/Item'
 import style from '../../../style/Features/QRScanner/components/ScannedProductPopup.module.scss'
 import clsx from 'clsx'
 import TrashIcon from '../../../assets/icons/trash.icon'
-import RestockIcon from '../../../assets/icons/restock.icon'
 import Popup from '../../Popup/Popup'
 
 type DraftPopupProps = {
