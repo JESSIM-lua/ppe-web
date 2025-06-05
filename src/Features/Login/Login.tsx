@@ -19,33 +19,35 @@ const Login = () => {
 	 * @param e - The form event
 	 */
 	const handleSubmit: React.FormEventHandler<HTMLFormElement> = async (e) => {
-	e.preventDefault()
-	try {
-		const response = await fetch('http://localhost:4000/api/auth/login', {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify({
-				username,
-				password,
-			}),
-		})
+		e.preventDefault()
+		try {
+			const response = await fetch(
+				'https://172.18.158.191:4000/api/auth/login',
+				{
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json',
+					},
+					body: JSON.stringify({
+						username,
+						password,
+					}),
+				}
+			)
 
-		const data = await response.json()
-		if (!response.ok || data.message === 'Unauthorized') {
-			setErrorConnexion(true)
-		} else {
-			localStorage.setItem('access_token', data.access_token)
-			localStorage.setItem('name', data.username)
-			navigate('/')
+			const data = await response.json()
+			if (!response.ok || data.message === 'Unauthorized') {
+				setErrorConnexion(true)
+			} else {
+				localStorage.setItem('access_token', data.access_token)
+				localStorage.setItem('name', data.username)
+				navigate('/')
+			}
+		} catch (error) {
+			console.error(error)
+			setConnexionFailed(true)
 		}
-	} catch (error) {
-		console.error(error)
-		setConnexionFailed(true)
 	}
-}
-
 
 	return (
 		<div className={style.loginContainer}>
